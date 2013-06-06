@@ -77,8 +77,6 @@ int dhm_read_params(dhm_context * ctx, unsigned char **p, unsigned char *end)
 {
 	int ret, n;
 
-	memset(ctx, 0, sizeof(dhm_context));
-
 	if ((ret = dhm_read_bignum(&ctx->P, p, end)) != 0 ||
 	    (ret = dhm_read_bignum(&ctx->G, p, end)) != 0 ||
 	    (ret = dhm_read_bignum(&ctx->GY, p, end)) != 0)
@@ -86,13 +84,7 @@ int dhm_read_params(dhm_context * ctx, unsigned char **p, unsigned char *end)
 
 	ctx->len = mpi_size(&ctx->P);
 
-	if (end - *p < 2)
-		return (TROPICSSL_ERR_DHM_BAD_INPUT_DATA);
-
-	n = ((*p)[0] << 8) | (*p)[1];
-	(*p) += 2;
-
-	if (end != *p + n)
+	if (end != *p)
 		return (TROPICSSL_ERR_DHM_BAD_INPUT_DATA);
 
 	return (0);

@@ -41,7 +41,7 @@
 /**
  * \brief          AES context structure
  */
-typedef struct {
+typedef struct _aes_context{
 	int nr;			/*!<  number of rounds  */
 	unsigned long *rk;	/*!<  AES round keys    */
 	unsigned long buf[68];	/*!<  unaligned data    */

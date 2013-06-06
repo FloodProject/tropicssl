@@ -40,7 +40,7 @@
 /**
  * \brief          HAVEGE state structure
  */
-typedef struct {
+typedef struct _havege_state{
 	int PT1, PT2, offset[2];
 	int pool[COLLECT_SIZE];
 	int WALK[8192];

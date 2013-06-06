@@ -38,7 +38,7 @@
 /**
  * \brief          SHA-256 context structure
  */
-typedef struct {
+typedef struct _sha2_context{
 	unsigned long total[2];	/*!< number of bytes processed  */
 	unsigned long state[8];	/*!< intermediate digest state  */
 	unsigned char buffer[64];	/*!< data block being processed */

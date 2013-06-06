@@ -76,7 +76,7 @@ typedef unsigned long long t_dbl;
 /**
  * \brief          MPI structure
  */
-typedef struct {
+typedef struct _mpi{
 	int s;			/*!<  integer sign      */
 	int n;			/*!<  total # of limbs  */
 	t_int *p;		/*!<  pointer to limbs  */

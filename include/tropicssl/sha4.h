@@ -46,7 +46,7 @@
 /**
  * \brief          SHA-512 context structure
  */
-typedef struct {
+typedef struct _sha4_context{
 	unsigned int64 total[2];	/*!< number of bytes processed  */
 	unsigned int64 state[8];	/*!< intermediate digest state  */
 	unsigned char buffer[128];	/*!< data block being processed */

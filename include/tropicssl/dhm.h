@@ -44,7 +44,7 @@
 #define TROPICSSL_ERR_DHM_MAKE_PUBLIC_FAILED                -0x04C0
 #define TROPICSSL_ERR_DHM_CALC_SECRET_FAILED                -0x04D0
 
-typedef struct {
+typedef struct _dhm_context{
 	int len;		/*!<  size(P) in chars  */
 	mpi P;			/*!<  prime modulus     */
 	mpi G;			/*!<  generator         */

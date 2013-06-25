@@ -15,3 +15,6 @@ project "tropicssl"
         "library/timing.c"
     }
     includedirs { "include" }
+    
+    configuration "windows"
+        defines { "WIN32" }
